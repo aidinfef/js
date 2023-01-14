@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="flex">
+    <h2 class="opros">уйумду сен сиктинби?</h2>
+  </div>
+  <div class="flex">
+    <div class="board">
+      <button id="btn1" class="btn">Оа</button>
+      <button id="btn" class="btn">Жок</button>
+    </div>
+  </div>
+  <script>
+    let btn1 = document.querySelector('#btn1');
+let opros = document.querySelector('.opros');
+
+const random = (min, max) => {
+ const rand = min + Math.random() * (max - min + 1);
+ return Math.floor(rand);
+}
+
+let btn = document.querySelector('#btn');
+btn.addEventListener('mouseenter', () => {
+ btn.style.left = `${random(0, 90)}%`;
+ btn.style.top = `${random(0, 90)}%`;
+})
+
+btn.addEventListener('click', function(){
+ opros.textContent = 'пизддить этпеш!!!'
+})
+
+btn1.addEventListener('click', function(){
+ opros.textContent = 'пидорас бля конченный!!!'
+})
+alert('ПРАВДУ СКАЖИ ДА')
+  </script>
+</body>
+</html>
